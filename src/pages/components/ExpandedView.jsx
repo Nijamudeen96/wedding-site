@@ -23,7 +23,7 @@ export default function ExpandedView({ photo, setPhoto, maxLength }) {
     }
     return (
         <div className={styles.expanded_view_container}>
-            <Image className={styles.expanded_view_image} src={photo.image} />
+            {photo ? <Image className={styles.expanded_view_image} src={photo.image} /> : null}
             <button className={styles.expanded_view_back} onClick={handleBackClick}> 🡄 </button>
             <button className={styles.expanded_view_front} onClick={handleFrontClick}> 🡆 </button>
             <button className={styles.expanded_view_close} onClick={handleCloseClick}> X </button>
