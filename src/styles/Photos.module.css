@@ -1,0 +1,62 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px;
+}
+
+.gallery_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 1vw;
+}
+
+.gallery_small {
+    padding: 0.5vw 0;
+    width: 32vw;
+    height: auto;
+}
+
+.expanded_view_container {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 2;
+    background-color: rgba(0,0,0,0.9);
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.expanded_view_image {
+    height: 80vh;
+    width: auto;
+    padding-top: 10vh;
+}
+
+.expanded_view_back {
+    position: absolute;
+    left: 10vw;
+    top: 50vh;
+    z-index: 3;
+    border-radius: 20px;
+    background-color: lightgray;
+}
+
+.expanded_view_front {
+    position: absolute;
+    right: 10vw;
+    top: 50vh;
+    z-index: 3;
+    border-radius: 20px;
+    background-color: lightgray;
+}
+
+.expanded_view_close {
+    position: absolute;
+    right: 10vw;
+    top: 5vh;
+    z-index: 3;
+}
