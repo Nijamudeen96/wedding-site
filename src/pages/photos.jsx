@@ -13,7 +13,7 @@ import img_5 from './images/img_5.jpg'
 import img_6 from './images/img_6.jpg'
 import img_7 from './images/img_7.jpg'
 
-export default function photos() {
+export default function Photos() {
     const [expandView, setExpandView] = useState(0)
     const photo_ids = [
         { id: 1, image: i.img_1 },
@@ -77,7 +77,7 @@ export default function photos() {
             <div className={styles.gallery_container}>
                 {
                     photo_ids.map((photo) => (
-                        <Image id={photo.id} className={styles.gallery_small} src={photo.image} onClick={clickHandler} />
+                        <Image key={photo.id} id={photo.id} className={styles.gallery_small} src={photo.image} onClick={clickHandler} />
                     ))
                 }
                 {

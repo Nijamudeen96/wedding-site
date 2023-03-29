@@ -4,7 +4,7 @@ import Option from './components/Option'
 import styles from '@/styles/RSVP.module.css'
 import Link from 'next/link'
 
-export default function rsvp() {
+export default function RSVP() {
     const router = useRouter();
 
     const [name, setName] = useState('')
