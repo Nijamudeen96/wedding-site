@@ -12,12 +12,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
+        {/* <Image src={hero_img} className={styles.hero_img} /> */}
         <div className={styles.hero}>
-          <h1 className={styles.name}>Nijam & Madhu</h1>
+          <h1 className={styles.name} >Nijam & Madhu</h1>
           <h2 className={styles.time}>02 June 2023 | 5.30pm - 9.00pm</h2>
           <h2 className={styles.location}>Arena Country Club</h2>
           <p className={styles.description}>We are looking forward to celebrating this joyous day with you!</p>
-          <button className={styles.rsvp_btn}><Link href="/rsvp">RSVP</Link></button>
+          <Link href="/rsvp" className={styles.rsvp_link}><button className={styles.rsvp_btn}>RSVP</button></Link>
           <button className={styles.photo_btn}><Link href="/photos">Photos</Link></button>
           <button className={styles.direction_btn}><Link href="/direction">Directions</Link></button>
         </div>

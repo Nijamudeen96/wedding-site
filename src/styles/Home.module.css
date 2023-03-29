@@ -1,12 +1,38 @@
 .main {
+  background-image: url("../pages/images/hero_img.jpg");
+  background-color: #cccccc;
   height: 100vh;
-  background-color: antiquewhite;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-blend-mode: multiply;
+  background-position: center top;
 }
+/* 
+.hero_img {
+  height: 100vh;
+  width: auto;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: -1;
+} */
 
 .hero {
-  margin: auto;
-  height: 70vh;
-  min-height: 600px;
+  height: 25vh;
+  min-height: 400px;
+  width: 25vw;
+  min-width: 360px;
+
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* background-color: rgba(255,255,255,0.7); */
+  border-radius: 20px;
   display: grid;
   justify-content: center;
   grid-template-areas: 
@@ -21,35 +47,62 @@
 .name {
   grid-area: name;
   margin: auto;
+  font-family: 'Alkatra', cursive;
+  font-size: 3rem;
+  color: white;
+  text-shadow: 2px 2px #000000;
 }
 
 .time {
   grid-area: time;
   margin: auto;
+  font-family: 'Edu NSW ACT Foundation', cursive;
+  color: white;
+  text-shadow: 2px 2px #000000;
+
 }
 
 .location {
   grid-area: location;
   margin: auto;
+  font-family: 'Edu NSW ACT Foundation', cursive;
+  color: white;
+  text-shadow: 2px 2px #000000;
 }
 
 .description {
   grid-area: description;
   margin: auto;
+  font-family: 'Edu NSW ACT Foundation', cursive;
+  color: white;
+  text-shadow: 2px 2px #000000;
+}
+
+.rsvp_link {
+  grid-area: rsvp_btn;
 }
 
 .rsvp_btn {
-  grid-area: rsvp_btn;
   margin: auto;
-
+  padding: 1rem 10rem;
+  font-family: 'Alkatra', cursive;
+  font-size: 1.5rem;
 }
 
 .photo_btn {
   grid-area: photo_btn;
   margin: auto;
+  padding: 1rem 3.8rem;
+  margin-left: 0;
+  font-family: 'Alkatra', cursive;
+  font-size: 1rem;
 }
 
 .direction_btn {
   grid-area: location_btn;
   margin: auto;
+  padding: 1rem 3.8rem;
+  margin-right: 0;
+  font-family: 'Alkatra', cursive;
+  font-size: 1rem;
 }
