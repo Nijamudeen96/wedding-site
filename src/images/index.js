@@ -43,3 +43,4 @@ export const img_42 = require('./img_42.jpg');
 export const img_43 = require('./img_43.jpg');
 export const img_44 = require('./img_44.jpg');
 export const img_45 = require('./img_45.jpg');
+

@@ -1,12 +1,27 @@
+import { useCallback, useEffect } from 'react';
 import Image from 'next/image'
 import styles from '@/styles/Photos.module.css'
+import *  as img from '../../images'
 
-const placeHolderPhoto = {
-    id: 0,
-    image: null
-}
+export default function ExpandedView({ photo, setPhoto, maxLength }) {
+    if (!photo) {
+        photo = { id: 1, image: img.img_1 }
+    }
 
-export default function ExpandedView({ photo = placeHolderPhoto, setPhoto, maxLength }) {
+    const escFunction = useCallback((event) => {
+        if (event.key === "Escape") {
+            setPhoto(0)
+        }
+    }, []);
+
+    useEffect(() => {
+        document.addEventListener("keydown", escFunction, false);
+
+        return () => {
+            document.removeEventListener("keydown", escFunction, false);
+        };
+    }, [escFunction]);
+
     const handleBackClick = () => {
         if (photo.id == 1) {
             setPhoto(maxLength)
@@ -26,6 +41,7 @@ export default function ExpandedView({ photo = placeHolderPhoto, setPhoto, maxLe
     const handleCloseClick = () => {
         setPhoto(0)
     }
+
 
     const isLandscape = photo.image.default.width > photo.image.default.height
 

@@ -3,15 +3,9 @@ import Link from 'next/link'
 import Image from 'next/image'
 import styles from '@/styles/Photos.module.css'
 import ExpandedView from './components/ExpandedView'
-import * as i from './images'
+import * as i from '../images'
+import logo from '../images/logo-no-background.png'
 
-import img_1 from './images/img_1.jpg'
-import img_2 from './images/img_2.jpg'
-import img_3 from './images/img_3.jpg'
-import img_4 from './images/img_4.jpg'
-import img_5 from './images/img_5.jpg'
-import img_6 from './images/img_6.jpg'
-import img_7 from './images/img_7.jpg'
 
 export default function Photos() {
     const [expandView, setExpandView] = useState(0)
@@ -69,10 +63,10 @@ export default function Photos() {
     }
 
     return (
-        <div>
+        <div className={styles.common_bg}>
             <div className={styles.navbar}>
-                <h1><Link href="/">Celebrating Love</Link></h1>
-                <button><Link href="/rsvp">RSVP</Link></button>
+                <Link href="/"><Image src={logo} className={styles.logo} /></Link>
+                <Link href="/rsvp"><button className={styles.cta_btn}>RSVP</button></Link>
             </div>
             <div className={styles.gallery_container}>
                 {

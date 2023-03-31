@@ -1,7 +1,35 @@
+.common_bg{
+    background: rgb(255,200,173);
+    background: linear-gradient(169deg, rgba(255,200,173,1) 0%, rgba(179,240,252,1) 100%);
+}
+
+.logo {
+    margin-top: 1rem;
+    height: 4rem;
+    width: auto;
+}
+
+
 .navbar {
     display: flex;
     justify-content: space-between;
-    padding: 10px 10px;
+    padding: 0.5vw 2vw;
+    font-family: 'Alkatra', cursive;
+}
+
+.cta_btn {
+    font-family: 'Alkatra', cursive;
+    font-size: 1.5rem;
+    padding: 0.3rem 1.5rem;
+    margin-top: 1.2rem ;
+    margin-right: 1rem;
+    background-color: #1688a3;
+    color: white;
+}
+
+.cta_btn:hover{
+    background-color:#116c82;
+    color: #cccccc;
 }
 
 .gallery_container {
@@ -11,26 +39,12 @@
     margin: 0 1vw;
 }
 
-/* .gallery_container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    grid-template-rows: repeat(auto-fit, 260px);
-    grid-auto-flow: dense;
-    grid-gap: 0.3rem;
-} */
-
 .gallery_small {
     padding: 0.5vw 0;
     width: 32vw;
     height: auto;
     object-fit: contain;
 }
-
-/* .gallery_small {
-    width: 500px;
-    height: auto;
-    object-fit: cover;
-} */
 
 .expanded_view_container {
     position: fixed;

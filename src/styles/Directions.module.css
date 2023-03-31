@@ -1,5 +1,75 @@
+.common_bg{
+    background: rgb(255,200,173);
+    background: linear-gradient(169deg, rgba(255,200,173,1) 0%, rgba(179,240,252,1) 100%);
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+}
+
+.logo {
+    margin-top: 1rem;
+    height: 4rem;
+    width: auto;
+}
+
 .navbar {
+    justify-self: center;
     display: flex;
     justify-content: space-between;
-    padding: 10px 10px;
+    padding: 1vw 2vw;
+    font-family: 'Alkatra', cursive;
+    width: 95vw;
+}
+
+.cta_btn {
+    font-family: 'Alkatra', cursive;
+    font-size: 1.5rem;
+    padding: 0.3rem 1.5rem;
+    margin-top: 1.2rem ;
+    margin-right: 1rem;
+    background-color: #1688a3;
+    color: white;
+}
+
+.cta_btn:hover{
+    background-color:#116c82;
+    color: #cccccc;
+}
+
+.d_address {
+    display: grid;
+    justify-self: center;
+    justify-content: center;
+    text-align: center;
+    grid-template-rows: 2.5rem 2.5rem 2rem 1.5rem 1.5rem 7rem 3rem 2rem 1rem 3rem 2rem;
+    font-family: 'Alkatra', cursive;
+    min-width: 370px;
+    width: 40vw;
+    margin:auto;
+    margin: 2rem 0;
+    border-radius: 1rem;
+}
+
+.d_cta_btn  {
+    max-width: 80vw;
+    margin: auto;
+    font-family: 'Alkatra', cursive;
+    font-size: 1.5rem;
+    padding: 0.5rem 1.5rem;
+    background-color: #1688a3;
+    color: white;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.d_cta_btn:hover {
+    background-color:#116c82;
+    color: #cccccc;
+}
+
+.d_directions {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    grid-template-rows: 3rem 2rem 1rem 1rem 2rem 1rem;
 }

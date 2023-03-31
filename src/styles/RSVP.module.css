@@ -1,5 +1,39 @@
+.common_bg {
+    background: rgb(255,200,173);
+    background: linear-gradient(169deg, rgba(255,200,173,1) 0%, rgba(179,240,252,1) 100%);
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+}
+
+.logo {
+    margin-top: 1rem;
+    height: 4rem;
+    width: auto;
+}
+
+
 .navbar {
+    justify-self: center;
     display: flex;
     justify-content: space-between;
-    padding: 10px 10px;
+    padding: 0.5vw 2vw;
+    font-family: 'Alkatra', cursive;
+    width: 95vw;
+}
+
+.form{
+    margin: auto;
+    display: grid;
+    justify-self: center;
+    margin-top: 2rem;
+    min-width: 370px;
+    width: 40vw;
+}
+
+.submit_btn {
+    margin-top: 1rem;
+    padding: 1rem 0;
+    font-family: 'Alkatra', cursive;
+    font-size: 1.5rem;
 }
