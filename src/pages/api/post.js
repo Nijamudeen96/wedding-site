@@ -1,7 +1,7 @@
 import clientPromise from "../../../lib/mongodb";
 
 export default async (req, res) => {
-    const { name, contactNumber, attendee, vegetarian } = JSON.parse(req.body);
+    const { name, contactNumber, attendee, vegetarian, wishes } = JSON.parse(req.body);
 
     const filter = { contactNumber: contactNumber }
     const options = { upsert: true }
@@ -10,7 +10,8 @@ export default async (req, res) => {
             name: name,
             contactNumber: contactNumber,
             attendee: attendee,
-            vegetarian: vegetarian
+            vegetarian: vegetarian,
+            wishes: wishes
         }
     }
     try {

@@ -13,6 +13,7 @@ export default function RSVP() {
     const [contactNumber, setContactNumber] = useState('')
     const [attendee, setAttendee] = useState(1)
     const [vegetarian, setVegetarian] = useState(0)
+    const [wishes, setWishes] = useState("")
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -22,6 +23,7 @@ export default function RSVP() {
                 contactNumber: contactNumber,
                 attendee: attendee,
                 vegetarian: vegetarian,
+                wishes: wishes
             };
 
             const response = await fetch("/api/post", {
@@ -70,7 +72,14 @@ export default function RSVP() {
                 <Option total_attendance={attendee} setVegetarian={setVegetarian} />
                 {vegetarian != 0 ? <p>No. of vegetarian: {vegetarian}</p> : null}
                 {vegetarian != attendee ? <p>No. of non-vegetarian: {attendee - vegetarian}</p> : null}
-                <button type="submit" className={styles.submit_btn}>Submit</button>
+                <label htmlFor="wishes">Your wishes for the couple (Optional)</label>
+                <input
+                    id="wishes"
+                    type="text"
+                    value={wishes}
+                    onChange={(e) => setWishes(e.target.value)}
+                />
+                <button type="submit" className={styles.submit_btn} >Submit</button>
             </form>
         </div>
     )
