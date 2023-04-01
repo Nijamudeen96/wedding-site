@@ -48,8 +48,8 @@ export default function ExpandedView({ photo, setPhoto, maxLength }) {
     return (
         <div className={styles.expanded_view_container}>
             {isLandscape ? <Image className={styles.expanded_view_image_landscape} src={photo.image} /> : <Image className={styles.expanded_view_image} src={photo.image} />}
-            <button className={styles.expanded_view_back} onClick={handleBackClick}> 🡄 </button>
-            <button className={styles.expanded_view_front} onClick={handleFrontClick}> 🡆 </button>
+            <button className={styles.expanded_view_back} onClick={handleBackClick}> &#60; </button>
+            <button className={styles.expanded_view_front} onClick={handleFrontClick}> &#62; </button>
             <button className={styles.expanded_view_close} onClick={handleCloseClick}> X </button>
         </div >
     )

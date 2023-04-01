@@ -70,9 +70,9 @@ export default function RSVP() {
                 />
                 <label htmlFor="vegetarian">Number Of Vegetarians</label>
                 <Option total_attendance={attendee} setVegetarian={setVegetarian} />
-                {vegetarian != 0 ? <p>No. of vegetarian: {vegetarian}</p> : null}
-                {vegetarian != attendee ? <p>No. of non-vegetarian: {attendee - vegetarian}</p> : null}
-                <label htmlFor="wishes">Your wishes for the couple (Optional)</label>
+                {vegetarian != 0 ? <p>No. of Vegetarian: {vegetarian}</p> : null}
+                {vegetarian != attendee ? <p>No. of Non-Vegetarian: {attendee - vegetarian}</p> : null}
+                <label htmlFor="wishes">Your Wishes For The Couple (Optional)</label>
                 <input
                     id="wishes"
                     type="text"
