@@ -43,11 +43,12 @@ export default function ExpandedView({ photo, setPhoto, maxLength }) {
     }
 
 
-    const isLandscape = photo.image.default.width > photo.image.default.height
+    // const isLandscape = photo.image.default.width > photo.image.default.height
 
     return (
         <div className={styles.expanded_view_container}>
-            {isLandscape ? <Image className={styles.expanded_view_image_landscape} src={photo.image} /> : <Image className={styles.expanded_view_image} src={photo.image} />}
+            {/* {isLandscape ? <Image className={styles.expanded_view_image_landscape} src={photo.image} /> : <Image className={styles.expanded_view_image} src={photo.image} />} */}
+            <Image className={styles.expanded_view_image_landscape} src={photo.image} alt="wedding_photo" />
             <button className={styles.expanded_view_back} onClick={handleBackClick}> &#60; </button>
             <button className={styles.expanded_view_front} onClick={handleFrontClick}> &#62; </button>
             <button className={styles.expanded_view_close} onClick={handleCloseClick}> X </button>

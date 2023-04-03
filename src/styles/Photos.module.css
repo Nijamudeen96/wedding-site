@@ -98,3 +98,8 @@
     top: 5vh;
     z-index: 3;
 }
+
+.cld_img {
+    height: 33vw;
+    width: 33vw;
+}
