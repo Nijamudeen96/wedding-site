@@ -37,3 +37,7 @@
     font-family: 'Alkatra', cursive;
     font-size: 1.5rem;
 }
+
+.submit_btn:hover{
+    background-color: #cccccc;
+}
