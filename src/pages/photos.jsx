@@ -10,13 +10,27 @@ import { CldImage } from 'next-cloudinary';
 export default function Photos() {
     const [expandView, setExpandView] = useState(0)
     const photo_ids = [
-        { id: 1, image: 'wedding/AVSA9229_bgebol' },
-        { id: 2, image: 'wedding/AVSA8894_pi5gdg' },
-        { id: 3, image: 'wedding/0I1A4429_h7hv92' },
-        { id: 4, image: 'wedding/0I1A4411_tnmece' },
-        { id: 5, image: 'wedding/0I1A4405_wmsfjr' },
-        { id: 6, image: 'wedding/0I1A4366_mpvngy' },
-        { id: 7, image: 'wedding/0I1A4361_zahb5g' }
+        { id: 1, image: 'wedding/img_7_dfoepz' },
+        { id: 2, image: 'wedding/img_6_xzzoqe' },
+        { id: 3, image: 'wedding/img_5_mb0ich' },
+        { id: 4, image: 'wedding/img_4_hkwzis' },
+        { id: 5, image: 'wedding/img_46_unnuss' },
+        { id: 6, image: 'wedding/img_45_lcfbt4' },
+        { id: 7, image: 'wedding/img_43_p1so4v' },
+        { id: 8, image: 'wedding/img_40_ledrlw' },
+        { id: 9, image: 'wedding/img_3_qu1jrx' },
+        { id: 10, image: 'wedding/img_33_knnwgy' },
+        { id: 11, image: 'wedding/img_30_frmnnd' },
+        { id: 12, image: 'wedding/img_2_cuxcjy' },
+        { id: 13, image: 'wedding/img_28_g0y98s' },
+        { id: 14, image: 'wedding/img_24_dhuxo8' },
+        { id: 15, image: 'wedding/img_21_vptuom' },
+        { id: 16, image: 'wedding/img_20_zbuaya' },
+        { id: 17, image: 'wedding/img_16_mnvpij' },
+        { id: 18, image: 'wedding/img_13_jfimvf' },
+        { id: 19, image: 'wedding/img_12_muneqa' },
+        { id: 20, image: 'wedding/img_11_ig6rpi' },
+        { id: 21, image: 'wedding/img_10_dm4vxo' }
     ]
 
     const clickHandler = (event) => {
