@@ -1,11 +1,10 @@
 import { useCallback, useEffect } from 'react';
 import styles from '@/styles/Photos.module.css'
-import *  as img from '../../images'
 import { CldImage } from 'next-cloudinary';
 
 export default function ExpandedView({ photo, setPhoto, maxLength }) {
     if (!photo) {
-        photo = { id: 1, image: img.img_1 }
+        photo = { id: 1, image: 'wedding/AVSA9229_bgebol' }
     }
 
     const escFunction = useCallback((event) => {
