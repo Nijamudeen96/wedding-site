@@ -1,7 +1,7 @@
 import { useCallback, useEffect } from 'react';
-import Image from 'next/image'
 import styles from '@/styles/Photos.module.css'
 import *  as img from '../../images'
+import { CldImage } from 'next-cloudinary';
 
 export default function ExpandedView({ photo, setPhoto, maxLength }) {
     if (!photo) {
@@ -42,13 +42,19 @@ export default function ExpandedView({ photo, setPhoto, maxLength }) {
         setPhoto(0)
     }
 
-
-    // const isLandscape = photo.image.default.width > photo.image.default.height
-
     return (
         <div className={styles.expanded_view_container}>
-            {/* {isLandscape ? <Image className={styles.expanded_view_image_landscape} src={photo.image} /> : <Image className={styles.expanded_view_image} src={photo.image} />} */}
-            <Image className={styles.expanded_view_image_landscape} src={photo.image} alt="wedding_photo" />
+            < CldImage
+                id={photo.id}
+                key={photo.id}
+                alt={photo.image}
+                className={styles.expanded_view_image}
+                width="1024"
+                height="1024"
+                src={photo.image}
+                crop="fit"
+                zoom="0.1"
+            />
             <button className={styles.expanded_view_back} onClick={handleBackClick}> &#60; </button>
             <button className={styles.expanded_view_front} onClick={handleFrontClick}> &#62; </button>
             <button className={styles.expanded_view_close} onClick={handleCloseClick}> X </button>
